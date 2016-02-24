@@ -1,0 +1,25 @@
+.ng-invalid-pattern {
+      border:3px solid #f00;
+}
+
+.table-divide {
+    background: #444;
+    color: #fff;
+}
+
+table.terms-table {
+    border:3px solid #000;
+    margin:3px;
+    padding:2px;
+}
+
+div.terms-table {
+    border:3px solid #000;
+    display: table;
+    margin: 0 auto;
+}
+
+.results {
+    width: 700px;
+    margin: 0 auto;
+}

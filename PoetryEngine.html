@@ -1,0 +1,201 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <title>Poetry Engine</title>
+        <meta charset="utf-8" />
+        <script src="lib/angular.js"></script>
+        <script src="js/main.js"></script>
+        <script src="js/dataMuseService.js"></script>
+        <script src="js/results.js"></script>
+        <link rel="stylesheet" type="text/css" href="styles/styles.css"/>
+    </head>
+    <body ng-app="app" ng-controller="searchController">
+        <div class="terms-table">
+            <table class="terms-table">
+                <tbody>
+                    <tr class="table-divide">
+                        <td colspan="4">Single word terms (enter one word):</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find rhymes with (<a href="PoetryEngine.html#?rel_rhy=tree" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_rhy"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="singlePattern" />
+                        </td>
+                        <td/>
+                        <td><a href="PoetryEngine.html#?rel_rhy=fight&amp;rel_syn=happy" onclick="window.location.reload(true);">Complex example#1</a></td>
+                    </tr>
+<!-- seems not to be working                   <tr>
+                        <td>
+                            <label>Find near rhymes to:</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_nry"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="singlePattern" />
+                        </td>
+                    </tr> -->
+                    <tr>
+                        <td>
+                            <label>Find words that sound like (<a href="PoetryEngine.html#?sl=tree" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="sl"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="singlePattern" />
+                        </td>
+                        <td/>
+                        <td><a href="PoetryEngine.html#?ml=beer&amp;sl=hat" onclick="window.location.reload(true);">Complex example#2</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find homophones of (<a href="PoetryEngine.html#?rel_hom=there" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_hom"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="singlePattern" />
+                        </td>
+                        </td>
+                        <td/>
+                        <td><a href="PoetryEngine.html#?sl=amuse&amp;rel_bga=daily" onclick="window.location.reload(true);">Complex example#3</a></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find consonant sound matches for (has to be a word) (<a href="PoetryEngine.html#?rel_cns=litter" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_cns"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="singlePattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find words related to (<a href="PoetryEngine.html#?ml=beer" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="ml"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="singlePattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find words spelled like (pattern, use * and ?) (<a href="PoetryEngine.html#?sp=k%3Ft*n" onclick="window.location.reload(true);">example</a>)</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="sp"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="spelledPattern" />
+                        </td>
+                    </tr>
+                    <tr class="table-divide">
+                        <td  colspan="4">Multiple word terms (separate with ","):</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find synonyms for (<a href="PoetryEngine.html#?rel_syn=happy" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_syn"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find antonyms for (<a href="PoetryEngine.html#?rel_ant=happy" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_ant"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find popular words for after/before  (<a href="PoetryEngine.html#?rel_bga=monday&amp;rel_bgb=wednesday" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_bga"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                        <td>xxx</td>
+                        <td>
+                            <input type="text" ng-model="rel_bgb"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find popular nouns for these adjectives (<a href="PoetryEngine.html#?rel_jja=ugly&amp;rel_jja=stupid" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_jja"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find popular adjectives for these nouns (<a href="PoetryEngine.html#?rel_jjb=car&amp;rel_jjb=truck" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_jjb"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find classes these belong to (<a href="PoetryEngine.html#?rel_spc=oak&amp;rel_spc=elm" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_spc"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find members of these classes (<a href="PoetryEngine.html#?rel_gen=tree&amp;rel_gen=wood" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_gen"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find components of (<a href="PoetryEngine.html#?rel_com=man" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_com"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label>Find things made from (major) components (<a href="PoetryEngine.html#?rel_par=wheel" onclick="window.location.reload(true);">example</a>):</label>
+                        </td>
+                        <td>
+                            <input type="text" ng-model="rel_par"
+                                    ng-model-options="{ debounce: 500 }"
+                                    ng-pattern="manyPattern" />
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        
+        <results search-terms="sterms"></results>
+    </body>
+</html>
