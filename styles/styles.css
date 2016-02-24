@@ -20,6 +20,7 @@ div.terms-table {
 }
 
 .results {
-    width: 700px;
+    max-width: 700px;
+    width: 100%
     margin: 0 auto;
 }
