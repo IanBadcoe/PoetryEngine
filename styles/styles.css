@@ -35,6 +35,14 @@ div.terms-table {
    box-sizing: border-box;
 }
 
+.results-nothing {
+   background: #f88;
+}
+
+.results-loading {
+   background: #ff8;
+}
+
 wrapper {
    opacity: 0.4;
    filter: alpha(opacity=40); /* msie */

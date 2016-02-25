@@ -1,6 +1,9 @@
-<div class="results">
+<div ng-class="getClass();">
     <div ng-show="spinner">Loading!!!</div>
     <span ng-repeat='word in words'>
         "{{word.word}}"
     </span>
+    <span ng-show="nothing && !loading">There are no results here.  It is surprisingly easy to be looking
+    in an area where no words exist.  Try removing some search terms.  Or use a looser search,
+    such as "sounds-like" instead of "rhymes-with"...</span>
 </div>
