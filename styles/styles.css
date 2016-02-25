@@ -23,14 +23,16 @@ div.terms-table {
    background-position: right 10px bottom 10px;
    background-repeat: no-repeat;
    background-size: 200px;
+   box-sizing: border-box;
 }
 
 .results {
-   max-width: 690px;
+   max-width: 700px;
    width: 100%;
    border: 3px solid #000;
    margin: 3px auto;
    padding: 5px;
+   box-sizing: border-box;
 }
 
 wrapper {
@@ -49,8 +51,9 @@ div {
 
 .footref {
    border: 3px solid #000;
-   max-width: 690px;
+   max-width: 700px;
    width: 100%;
    margin: 3px auto 0 auto;
    padding: 5px;
+   box-sizing: border-box;
 }
