@@ -3,31 +3,84 @@
 <head>
 <title>Final Girl - A colour poem by Ian Badcoe</title>
 <style>
-h1 {text-align: center;}
-div { text-align: center; }
-span { padding-left: 0.3em; padding-right: 0.3em; padding-bottom: 0.1em; margin: 0; border: 0; font-size: 200%; font-family: "Times New Roman", Times, serif;}
-.red { background-color: red; }
-.green { background-color: green; }
-.blue { background-color: blue; color: white; }
-.yellow { background-color: yellow; }
-.cyan { background-color: cyan; }
-.purple { background-color: purple; color: white; }
-.white { background-color: black; color: white; }
-.todo { background-color: gray; }
-.space::before { display: inline-block; padding: 0; margin: 0; border: 0; content: "\00a0" }
-.space { display: inline-block; padding: 0; margin: 0; border: 0; width: 5em; }
-.nspace::before { display: inline-block; padding: 0; margin: 0; border: 0; content: "\00a0" }
-.nspace { display: inline-block; padding: 0; margin: 0; border: 0; width: 2em; }
-.sspace::before { display: inline-block; padding: 0; margin: 0; border: 0; content: "\00a0" }
-.sspace { display: inline-block; padding: 0; margin: 0; border: 0; width: 1em; }
-.hspace::before { display: inline-block; padding: 0; margin: 0; border: 0; content: "\00a0" }
-.hspace { display: inline-block; padding: 0; margin: 0; border: 0; width: 0.5em; }
+body {
+	width: 100em;
+	height: 300em;
+	background-image: url("./IMG_20170910_132903171.jpg");
+	background-size: 100em 300em;
+	background-repeat: no-repeat;
+}
+h1 {
+	text-align: center;
+}
+div {
+	text-align: center;
+}
+span {
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+	padding-bottom: 0.1em;
+	margin: 0;
+	border: 0;
+	font-size: 200%;
+	font-family: "Times New Roman", Times, serif;
+	transition: 20s;
+	color: #00000000;
+}
+.special_red { background-color: red; opacity: 1; color: black; }
+.red:hover { background-color: red; opacity: 1; color: black; transition: 0.2s; }
+.green:hover { background-color: green; color: black; transition: 0.2s; }
+.blue:hover { background-color: blue; color: white; transition: 0.2s; }
+.yellow:hover { background-color: yellow; color: black; transition: 0.2s; }
+.cyan:hover { background-color: cyan; color: black; transition: 0.2s; }
+.purple:hover { background-color: purple; color: white; transition: 0.2s; }
+.white:hover { background-color: black; color: white; transition: 0.2s; }
+.space::before {
+	display: inline-block;
+	padding: 0;
+	content: "\00a0";
+}
+.space {
+	display: inline-block;
+	padding: 0;
+	width: 5em;
+}
+.nspace::before {
+	display: inline-block;
+	padding: 0;
+	content: "\00a0";
+}
+.nspace {
+	display: inline-block;
+	padding: 0;
+	width: 2em;
+}
+.sspace::before {
+	display: inline-block;
+	padding: 0;
+	content: "\00a0";
+}
+.sspace {
+	display: inline-block;
+	padding: 0;
+	width: 1em;
+}
+.hspace::before {
+	display: inline-block;
+	padding: 0;
+	content: "\00a0";
+}
+.hspace {
+	display: inline-block;
+	padding: 0;
+	width: 0.5em;
+}
 .bold { font-weight: bolder; }
 </style>
 </head>
-<body style="width: 100em;">
+<body>
 <h1>Final Girl</h1>
-<div><span class="red bold">...in</span></div>
+<div><span class="special_red bold">...in</span></div>
 <div><span class="red bold">the</span></div>
 <div><span class="red bold">sense</span></div>
 <div><span class="red bold">of last</span><span class="green bold">...in</span></div>
