@@ -16,7 +16,7 @@ h1 {
 div {
 	text-align: center;
 }
-span {
+.main_span {
 	padding-left: 0.3em;
 	padding-right: 0.3em;
 	padding-bottom: 0.1em;
@@ -24,181 +24,190 @@ span {
 	border: 0;
 	font-size: 200%;
 	font-family: "Times New Roman", Times, serif;
-	transition: 20s;
+	transition: 120s;
 	color: #00000000;
 }
-.special_red { background-color: red; opacity: 1; color: black; }
-.red:hover { background-color: red; opacity: 1; color: black; transition: 0.2s; }
-.green:hover { background-color: green; color: black; transition: 0.2s; }
-.blue:hover { background-color: blue; color: white; transition: 0.2s; }
-.yellow:hover { background-color: yellow; color: black; transition: 0.2s; }
-.cyan:hover { background-color: cyan; color: black; transition: 0.2s; }
-.purple:hover { background-color: purple; color: white; transition: 0.2s; }
-.white:hover { background-color: black; color: white; transition: 0.2s; }
+@keyframes fade_out {
+	0% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}	
+.special_fade {
+	background-color: gray;
+	color: black;
+	animation-name: fade_out;
+	animation-fill-mode: forwards;
+	animation-duration: 10s;
+	animation-iteration-count: 1;
+}
+.special_red { background-color: red; color: black; }
+.red:active { background-color: red; color: black; transition: 0.0s; transition-timing-function: ease-in; }
+.green:active { background-color: green; color: black; transition: 0.0s; }
+.blue:active { background-color: blue; color: white; transition: 0.0s; }
+.yellow:active { background-color: yellow; color: black; transition: 0.0s; }
+.cyan:active { background-color: cyan; color: black; transition: 0.0s; }
+.purple:active { background-color: purple; color: white; transition: 0.0s; }
+.white:active { background-color: black; color: white; transition: 0.0s; }
 .space::before {
-	display: inline-block;
 	padding: 0;
-	content: "\00a0";
+	content: "s";
+	color: #00000000;
 }
 .space {
-	display: inline-block;
-	padding: 0;
-	width: 5em;
+	padding: 0 5em 0.1em 0;
 }
 .nspace::before {
-	display: inline-block;
 	padding: 0;
-	content: "\00a0";
+	content: "s";
+	color: #00000000;
 }
 .nspace {
-	display: inline-block;
-	padding: 0;
-	width: 2em;
+	padding: 0 2em 0.1em 0;
 }
 .sspace::before {
-	display: inline-block;
 	padding: 0;
-	content: "\00a0";
+	content: "s";
+	color: #00000000;
 }
 .sspace {
-	display: inline-block;
-	padding: 0;
-	width: 1em;
+	padding: 0 1em 0.1em 0;
 }
 .hspace::before {
-	display: inline-block;
 	padding: 0;
-	content: "\00a0";
+	content: "s";
+	color: #00000000;
 }
 .hspace {
-	display: inline-block;
-	padding: 0;
-	width: 0.5em;
+	padding: 0 0.5em 0.1em 0;
 }
 .bold { font-weight: bolder; }
 </style>
 </head>
 <body>
 <h1>Final Girl</h1>
-<div><span class="special_red bold">...in</span></div>
-<div><span class="red bold">the</span></div>
-<div><span class="red bold">sense</span></div>
-<div><span class="red bold">of last</span><span class="green bold">...in</span></div>
-<div><span class="red bold">surviving</span><span class="green bold">the</span></div>
-<div><span class="red nspace"></span><span class="green bold">sense</span></div>
-<div><span class="red">and long has</span><span class="green bold">of</span></div>
-<div><span class="red">she suspected</span><span class="green bold">terminating</span></div>
-<div><span class="red">which is to say she fears</span><span class="green bold">a sequence</span></div>
-<div><span class="red">there is a process going on</span><span class="green nspace"></span></div>
-<div><span class="red">where she inevitably falls out last</span><span class="green">it is a matter</span></div>
-<div><span class="red">with sideways eye watched the villain</span><span class="green">of taking</span></div>
-<div><span class="red">slash through the cast</span><span class="green">never giving,</span></div>
-<div><span class="blue bold">...in</span><span class="red">at a prodigious rate</span><span class="green">there being</span></div>
-<div><span class="blue bold">the</span><span class="red">meaning now she</span><span class="green">no small successor</span></div>
-<div><span class="blue bold">sense</span><span class="red">has no friend</span><span class="green">to pass a damn</span></div>
-<div><span class="blue bold">of ultimate,</span><span class="red">or lover</span><span class="green">thing too</span></div>
-<div><span class="blue bold">unsurpassed</span><span class="red">left</span><span class="green">or at least</span></div>
-<div><span class="sspace"></span><span class="blue nspace"></span><span class="red">to fall</span><span class="yellow bold">...in</span><span class="green">nothing</span></div>
-<div><span class="blue">very best is</span><span class="red">back on</span><span class="yellow bold">the</span><span class="green">inherited</span></div>
-<div><span class="blue">awkward to define</span><span class="red">and arse hits</span><span class="yellow bold">sense that</span><span class="green">to do</span><span class="nspace"></span></div>
-<div><span class="blue">does she run</span><span class="red">floor scoots</span><span class="yellow bold">the last</span><span class="green">with what</span></div>
-<div><span class="blue">does she skate</span><span class="red">backwards</span><span class="yellow bold">survivor</span><span class="green">they’d called</span></div>
-<div><span class="blue">does she shine</span><span class="red">desperately</span><span class="yellow bold">inevitably</span><span class="green">a gender</span></div>
-<div><span class="blue">in some other</span><span class="red">from the door</span><span class="yellow bold">terminates a</span><span class="green">long years</span></div>
-<div><span class="blue">field or fields of</span><span class="red">the shadow falling</span><span class="yellow bold">sequence</span><span class="hspace"></span><span class="green">past in the</span><span class="space" style="width: 6.7em;"></span></div>
-<div><span class="blue">human</span><span class="red">the promised doom</span><span class="yellow space" style="width: 3.5em;"></span><span class="hspace"></span><span class="green">morning of her</span></div>
-<div><span class="space" style="width: 3.5em;"></span><span class="blue">endeavour</span><span class="red">foreseeable</span><span class="yellow">and what a</span><span class="sspace"></span><span class="green">birth she has watched</span></div>
-<div><span class="space" style="width: 3em;"></span><span class="blue">does she</span><span class="red">a knife</span><span class="yellow">relief there is in that,</span><span class="nspace"></span><span class="green">the population slowly</span></div>
-<div><span class="space" style="width: 2em;"></span><span class="blue space"></span><span class="red">that rises</span><span class="yellow">there’s no more</span><span class="space" style="width: 3em;"></span><span class="green">evolve away from</span></div>
-<div><span class="blue">have a Ph.D.</span><span class="purple bold">...in</span><span class="red">eager</span><span class="yellow">reels for</span><span class="space"></span><span class="green">the idiotic</span></div>
-<div><span class="space" style="width: 2em;"></span><span class="blue">&nbsp;&nbsp;&nbsp;&nbsp;a Nobel Prize</span><span class="purple bold">the</span><span class="red">keenly</span><span class="yellow">the sadist</span><span class="space" style="width: 3em;"></span><span class="green">binary the choice</span></div>
-<div><span class="blue">an Olympic Medal</span><span class="purple bold">sense that the</span><span class="red">sharp,</span><span class="yellow">director no more</span><span class="nspace"></span><span class="green">of only two the choice</span><span class="space" style="width: 4em;"></span></div>
-<div><span class="blue">or does she just</span><span class="purple bold">last survivor</span><span class="red">exquisite</span><span class="yellow space" style="width: 4.3em;"></span><span class="sspace"></span><span class="green">of no choice really</span><span class="nspace"></span></div>
-<div><span class="blue">work three</span><span class="purple bold">constitutes an</span><span class="red">until her</span><span class="yellow">friends to lose</span><span class="hspace"></span><span class="green">that one choice</span><span class="space" style="width: 3em;"></span></div>
-<div><span class="blue">poverty-wages</span><span class="purple bold">ultimate</span><span class="red">hand, pushed behind</span><span class="yellow">and even though</span><span class="hspace"></span><span class="green">assign/imposed</span><span class="space" style="width: 8em;"></span></div>
-<div><span class="blue">scutwork jobs</span><span class="purple bold">expression,</span><span class="red">for balance, chances</span><span class="yellow">the actors</span><span class="green">at birth</span><span class="space" style="width: 6em;"></span></div>
-<div><span class="blue">simultaneously</span><span class="purple bold">even were further</span><span class="red">to close around</span><span class="yellow">retain</span><span class="green"></span><span class="space" style="width: 4em;"></span></div>
-<div><span class="space"></span><span class="blue">&nbsp;&#8594;&nbsp;</span><span class="purple bold">refinement</span><span class="red">some piece of</span><span class="yellow">overly</span><span class="green">until</span><span class="blue">&nbsp;&#8595;&nbsp;</span><span class="sspace"></span></div>
-<div><span class="space" style="width: 7em;"></span><span class="purple bold">possible</span><span class="red">lost debris</span><span class="yellow">glittery souls</span><span class="green space"></span><span class="blue">to feed her</span></div>
-<div><span class="space" style="width: 7em"></span><span class="purple nspace" style="width: 1em"></span><span class="red">reassuring solid</span><span class="yellow space"></span><span class="green">now</span><span class="blue">younger siblings</span></div>
-<div><span class="sspace"></span><span class="purple">it's a sort</span><span class="red">and pleasantly</span><span class="yellow">to chance</span><span class="green nspace"></span><span class="blue">the question is</span></div>
-<div><span class="purple">of winning</span><span class="red">like</span><span class="yellow">encounter by</span><span class="green">there’s</span><span class="cyan bold">...in</span><span class="blue">meaningless</span></div>
-<div><span class="purple">by default, saying:</span><span class="red">a</span><span class="yellow">the food truck</span><span class="green">only her</span><span class="cyan bold">the </span><span class="blue">if asked</span><span class="space"></span></div>
-<div><span class="space" style="width: 3em;"></span><span class="purple nspace"></span><span class="red">weapon</span><span class="yellow">air kiss on the</span><span class="green">calling herself</span><span class="cyan bold">sense</span><span class="blue">in any concrete</span></div>
-<div><span class="purple">since no-one else turned up</span><span class="yellow">red-carpet-premier</span><span class="green">a “her” and</span><span class="cyan bold">of</span><span class="blue">situation “ultimate”</span></div>
-<div><span class="purple">I hereby crown myself</span><span class="yellow">-oh-god-look-who-else-is-here</span><span class="green">that is</span><span class="cyan bold">terminating</span><span class="blue">is like “infinity” not</span></div>
-<div><span class="purple">queen of the world</span><span class="yellow">-who-brought-her-anyway</span><span class="green">mostly</span><span class="cyan bold">a sequence</span><span class="blue">a place you</span></div>
-<div><span class="space" style="width: 3em"></span><span class="purple space"></span><span class="yellow">even though</span><span class="green">habit</span><span class="cyan bold">by making</span><span class="blue">can reach</span></div>
-<div><span class="purple">the others have been tried</span><span class="yellow space" style="width: 3em;"></span><span class="cyan bold">further</span><span class="blue">but a</span><span class="nspace"></span></div>
-<div><span class="purple">and their</span><span class="yellow">the characters</span><span class="cyan bold">iteration</span><span class="blue">process</span></div>
-<div><span class="purple">absence</span><span class="yellow">are</span><span class="cyan bold">irrelevant</span><span class="blue">to pursue</span><span class="white bold">...in</span></div>
-<div><span class="purple">finds them</span><span class="yellow">all long</span><span class="cyan space"></span><span class="blue">as far</span><span class="white bold">the</span></div>
-<div><span class="purple">wanting</span><span class="yellow">gone to blood-red</span><span class="cyan">it’s not</span><span class="blue">or little as</span><span class="white bold">sense</span></div>
-<div><span class="purple">it’s totally</span><span class="yellow">Rorschachs’ she</span><span class="cyan">a matter of being</span><span class="blue">you</span><span class="white bold">of</span></div>
-<div><span class="space" style="width: 2em"></span><span class="purple">unfair</span><span class="yellow">hopes her therapist</span><span class="cyan">the best</span><span class="blue">wish</span><span class="white bold">the</span></div>
-<div><span class="purple">but</span><span class="yellow">will not bring</span><span class="cyan">it’s running out of</span><span class="white bold">last</span></div>
-<div><span class="purple">somehow</span><span class="yellow">up</span><span class="cyan">upgrades she could</span><span class="white bold">survivor,</span></div>
-<div><span class="purple">very</span><span class="cyan">take, enhancements</span><span class="white bold">unsurpassed,</span></div>
-<div><span class="purple">real</span><span class="cyan">feasible to make,</span><span class="white bold">unsurpassable,</span></div>
-<div><span class="cyan">infrastructure that could possibly</span><span class="white bold">terminating</span></div>
-<div><span class="cyan">be better, faster, stronger,</span><span class="white bold">a sequence,</span></div>
-<div><span class="cyan">more efficient,</span><span class="white bold">indeed all</span></div>
-<div><span class="cyan">sometimes she longs for</span><span class="white bold">sequences</span></div>
-<div><span class="cyan">long gone days</span><span class="white nspace"></span></div>
-<div><span class="cyan">when she</span><span class="white">in the end is nothing</span></div>
-<div><span class="cyan">could pluck any task</span><span class="white">except ice-cold photons</span></div>
-<div><span class="cyan">from the maze</span><span class="white">flicking through the void</span></div>
-<div><span class="cyan">of things undone</span><span class="white">and the spirit of Final Girl moves</span></div>
-<div><span class="cyan">and settle down</span><span class="white">on the face of the continuum</span></div>
-<div><span class="cyan">to a serious few</span><span class="white">nagged by a feeling, a sensation</span></div>
-<div><span class="cyan">days of doing</span><span class="white">almost a longing:</span></div>
-<div><span class="cyan">the concomitant</span><span class="white">something left undone and</span></div>
-<div><span class="cyan">disregard</span><span class="white">as she watches the last few, huge black holes</span></div>
-<div><span class="cyan">of being that left no space</span><span class="white nspace"></span><span class="nspace"></span></div>
-<div><span class="cyan">for doubt</span><span class="white">spin, orbit</span></div>
-<div><span class="cyan">those were</span><span class="white">sedately</span></div>
-<div><span class="cyan">the days</span><span class="white">spiral eventually together</span></div>
-<div><span class="cyan">not that there isn’t joy</span><span class="white">she thinks</span></div>
-<div><span class="cyan">in being</span><span class="white nspace"></span></div>
-<div><span class="space" style="width: 4em;"></span><span class="cyan">an ultimate</span><span class="white">I remember when all this was...</span></div>
-<div><span class="cyan">expression</span><span class="white">“better”</span></div>
-<div><span class="cyan">but it sure is lonely:</span><span class="white nspace"></span></div>
-<div><span class="cyan">being perfection</span><span class="white">and the mind of Final Girl,</span></div>
-<div><span class="white">with all the tricks for knowing</span></div>
-<div><span class="white">and understanding ever invented, returns</span></div>
-<div><span class="white">to the old mathematics the ancient</span></div>
-<div><span class="white">unanswered questions and</span></div>
-<div><span class="white">she thinks and</span></div>
-<div><span class="white">she thinks all</span></div>
-<div><span class="white">through the senile old age of a cosmos</span></div>
-<div><span class="white">while the black holes decay,</span></div>
-<div><span class="white">in random particle noise</span></div>
-<div><span class="white">and at length reaches</span></div>
-<div><span class="white">a conclusion, a plan</span></div>
-<div><span class="white">gathers the last few scraps of energy</span></div>
-<div><span class="white">forms a careful shape to push, just so</span></div>
-<div><span class="white">on the fabric of the continuum</span></div>
-<div><span class="white">but there is a gap something still missing</span></div>
-<div><span class="white">and only one source of “things”</span></div>
-<div><span class="white">worthy of the name in the Universe</span></div>
-<div><span class="white">so Final Girl pours herself</span></div>
-<div><span class="white">into that tiny</span></div>
-<div><span class="white">twist of purest maths</span></div>
-<div><span class="white">and feeling herself bleed away</span></div>
-<div><span class="white">watches the construct stumble</span></div>
-<div><span class="white">once, then fire, folding in with exquisite</span></div>
-<div><span class="white">perfection and Final Girl smiles,</span></div>
-<div><span class="white">because tradition demands</span></div>
-<div><span class="white">certain words</span></div>
-<div><span class="white">at a time</span></div>
-<div><span class="white">like this,</span></div>
-<div><span class="white">and</span></div>
-<div><span class="white">she</span></div>
-<div><span class="white">says:</span></div>
-<div><span class="white"></span></div>
-<div><span class="white"><i>Let there be Li-</i>.</span></div>
-<div><span class="white">and is gone</span></div>
-<div><span class="white">&nbsp;</span></div>
-<div><span class="white">but there is light</span></div>
-<div><span class="white">and it is good.</span></div>
+<div><span class="special_fade bold">Touch/click to reveal more words...</span></div>
+<div><span class="main_span special_red bold">...in</span></div>
+<div><span class="main_span red bold">the</span></div>
+<div><span class="main_span red bold">sense</span></div>
+<div><span class="main_span red bold">of last</span><span class="main_span green bold">...in</span></div>
+<div><span class="main_span red bold">surviving</span><span class="main_span green bold">the</span></div>
+<div><span class="main_span red nspace"></span><span class="main_span green bold">sense</span></div>
+<div><span class="main_span red">and long has</span><span class="main_span green bold">of</span></div>
+<div><span class="main_span red">she suspected</span><span class="main_span green bold">terminating</span></div>
+<div><span class="main_span red">which is to say she fears</span><span class="main_span green bold">a sequence</span></div>
+<div><span class="main_span red">there is a process going on</span><span class="main_span green nspace"></span></div>
+<div><span class="main_span red">where she inevitably falls out last</span><span class="main_span green">it is a matter</span></div>
+<div><span class="main_span red">with sideways eye watched the villain</span><span class="main_span green">of taking</span></div>
+<div><span class="main_span red">slash through the cast</span><span class="main_span green">never giving,</span></div>
+<div><span class="main_span blue bold">...in</span><span class="main_span red">at a prodigious rate</span><span class="main_span green">there being</span></div>
+<div><span class="main_span blue bold">the</span><span class="main_span red">meaning now she</span><span class="main_span green">no small successor</span></div>
+<div><span class="main_span blue bold">sense</span><span class="main_span red">has no friend</span><span class="main_span green">to pass a damn</span></div>
+<div><span class="main_span blue bold">of ultimate,</span><span class="main_span red">or lover</span><span class="main_span green">thing too</span></div>
+<div><span class="main_span blue bold">unsurpassed</span><span class="main_span red">left</span><span class="main_span green">or at least</span></div>
+<div><span class="main_span sspace"></span><span class="main_span blue nspace"></span><span class="main_span red">to fall</span><span class="main_span yellow bold">...in</span><span class="main_span green">nothing</span></div>
+<div><span class="main_span blue">very best is</span><span class="main_span red">back on</span><span class="main_span yellow bold">the</span><span class="main_span green">inherited</span></div>
+<div><span class="main_span blue">awkward to define</span><span class="main_span red">and arse hits</span><span class="main_span yellow bold">sense that</span><span class="main_span green">to do</span><span class="main_span nspace"></span></div>
+<div><span class="main_span blue">does she run</span><span class="main_span red">floor scoots</span><span class="main_span yellow bold">the last</span><span class="main_span green">with what</span></div>
+<div><span class="main_span blue">does she skate</span><span class="main_span red">backwards</span><span class="main_span yellow bold">survivor</span><span class="main_span green">they’d called</span></div>
+<div><span class="main_span blue">does she shine</span><span class="main_span red">desperately</span><span class="main_span yellow bold">inevitably</span><span class="main_span green">a gender</span></div>
+<div><span class="main_span blue">in some other</span><span class="main_span red">from the door</span><span class="main_span yellow bold">terminates a</span><span class="main_span green">long years</span></div>
+<div><span class="main_span blue">field or fields of</span><span class="main_span red">the shadow falling</span><span class="main_span yellow bold">sequence</span><span class="main_span hspace"></span><span class="main_span green">past in the</span><span class="main_span space" style="padding-right: 6.7em;"></span></div>
+<div><span class="main_span blue">human</span><span class="main_span red">the promised doom</span><span class="main_span yellow space" style="padding-right: 3.5em;"></span><span class="main_span hspace"></span><span class="main_span green">morning of her</span></div>
+<div><span class="main_span space" style="padding-right: 3.5em;"></span><span class="main_span blue">endeavour</span><span class="main_span red">foreseeable</span><span class="main_span yellow">and what a</span><span class="main_span sspace"></span><span class="main_span green">birth she has watched</span></div>
+<div><span class="main_span space" style="padding-right: 3em;"></span><span class="main_span blue">does she</span><span class="main_span red">a knife</span><span class="main_span yellow">relief there is in that,</span><span class="main_span nspace"></span><span class="main_span green">the population slowly</span></div>
+<div><span class="main_span space" style="padding-right: 2em;"></span><span class="main_span blue space"></span><span class="main_span red">that rises</span><span class="main_span yellow">there’s no more</span><span class="main_span space" style="padding-right: 3em;"></span><span class="main_span green">evolve away from</span></div>
+<div><span class="main_span blue">have a Ph.D.</span><span class="main_span purple bold">...in</span><span class="main_span red">eager</span><span class="main_span yellow">reels for</span><span class="main_span space"></span><span class="main_span green">the idiotic</span></div>
+<div><span class="main_span hspace"></span><span class="main_span blue">a Nobel Prize</span><span class="main_span purple bold">the sense</span><span class="main_span red">keenly</span><span class="main_span yellow">the sadist</span><span class="main_span space" style="padding-right: 3em;"></span><span class="main_span green">binary the choice</span></div>
+<div><span class="main_span nspace"></span><span class="main_span blue">an Olympic Medal</span><span class="main_span purple bold">that the</span><span class="main_span red">sharp,</span><span class="main_span yellow">director no more</span><span class="main_span nspace"></span><span class="main_span green">of only two the choice</span><span class="main_span space" style="padding-right: 4em;"></span></div>
+<div><span class="main_span blue">or does she just</span><span class="main_span purple bold">last survivor</span><span class="main_span red">exquisite</span><span class="main_span yellow space" style="padding-right: 4.3em;"></span><span class="main_span sspace"></span><span class="main_span green">of no choice really</span><span class="main_span nspace"></span></div>
+<div><span class="main_span blue">work three</span><span class="main_span purple bold">constitutes an</span><span class="main_span red">until her</span><span class="main_span yellow">friends to lose</span><span class="main_span hspace"></span><span class="main_span green">that one choice</span><span class="main_span space" style="padding-right: 3em;"></span></div>
+<div><span class="main_span blue">poverty-wage</span><span class="main_span purple bold">ultimate</span><span class="main_span red">hand, pushed behind</span><span class="main_span yellow">and even though</span><span class="main_span hspace"></span><span class="main_span green">assign/imposed</span><span class="main_span space" style="padding-right: 8em;"></span></div>
+<div><span class="main_span blue">scutwork jobs</span><span class="main_span purple bold">expression,</span><span class="main_span red">for balance, chances</span><span class="main_span yellow">the actors</span><span class="main_span green">at birth</span><span class="main_span space" style="padding-right: 6em;"></span></div>
+<div><span class="main_span blue">simultaneously</span><span class="main_span purple bold">even were further</span><span class="main_span red">to close around</span><span class="main_span yellow">retain</span><span class="main_span green"></span><span class="main_span space" style="padding-right: 4em;"></span></div>
+<div><span class="main_span space"></span><span class="main_span blue">&nbsp;&#8594;&nbsp;</span><span class="main_span purple bold">refinement</span><span class="main_span red">some piece of</span><span class="main_span yellow">overly</span><span class="main_span green">until</span><span class="main_span blue">&nbsp;&#8595;&nbsp;</span><span class="main_span sspace"></span></div>
+<div><span class="main_span space" style="padding-right: 7em;"></span><span class="main_span purple bold">possible</span><span class="main_span red">lost debris</span><span class="main_span yellow">glittery souls</span><span class="main_span green space"></span><span class="main_span blue">to feed her</span></div>
+<div><span class="main_span space" style="padding-right: 7em"></span><span class="main_span purple nspace" style="padding-right: 1em"></span><span class="main_span red">reassuring solid</span><span class="main_span yellow space"></span><span class="main_span green">now</span><span class="main_span blue">younger siblings</span></div>
+<div><span class="main_span sspace"></span><span class="main_span purple">it's a sort</span><span class="main_span red">and pleasantly</span><span class="main_span yellow">to chance</span><span class="main_span green nspace"></span><span class="main_span blue">the question is</span></div>
+<div><span class="main_span purple">of winning</span><span class="main_span red">like</span><span class="main_span yellow">encounter by</span><span class="main_span green">there’s</span><span class="main_span cyan bold">...in</span><span class="main_span blue">meaningless</span></div>
+<div><span class="main_span purple">by default, saying:</span><span class="main_span red">a</span><span class="main_span yellow">the food truck</span><span class="main_span green">only her</span><span class="main_span cyan bold">&nbsp;&nbsp;the&nbsp;&nbsp;</span><span class="main_span blue">if asked</span><span class="main_span space"></span></div>
+<div><span class="main_span space" style="padding-right: 3em;"></span><span class="main_span purple nspace"></span><span class="main_span red">weapon</span><span class="main_span yellow">air kiss on the</span><span class="main_span green">calling herself</span><span class="main_span cyan bold">sense</span><span class="main_span blue">in any concrete</span>&nbsp;&nbsp;&nbsp;</div>
+<div><span class="main_span purple"><i>since no-one else turned up</i></span><span class="main_span yellow">red-carpet-premier</span><span class="main_span green">a “her” and</span><span class="main_span cyan bold">of</span><span class="main_span blue">situation <i>ultimate</i></span></div>
+<div><span class="main_span purple"><i>I hereby crown myself</i></span><span class="main_span yellow">-<i>oh-god-look-who-else-is-here</i></span><span class="main_span green">that is</span><span class="main_span cyan bold">terminating</span><span class="main_span blue">is like <i>infinity</i> not</span></div>
+<div><span class="main_span purple"><i>queen of the world</i></span><span class="main_span yellow"><i>-who-brought-her-anyway</i></span><span class="main_span green">mostly</span><span class="main_span cyan bold">a sequence</span><span class="main_span blue">a place you</span></div>
+<div><span class="main_span space" style="padding-right: 3em"></span><span class="main_span purple space"></span><span class="main_span yellow">even though</span><span class="main_span green">habit</span><span class="main_span cyan bold">by making</span><span class="main_span blue">can reach</span></div>
+<div><span class="main_span purple">the others have been tried</span><span class="main_span yellow space" style="padding-right: 3em;"></span><span class="main_span cyan bold">further</span><span class="main_span blue">but a</span><span class="main_span nspace"></span></div>
+<div><span class="main_span purple">and their</span><span class="main_span yellow">the characters</span><span class="main_span cyan bold">iteration</span><span class="main_span blue">process</span></div>
+<div><span class="main_span purple">absence</span><span class="main_span yellow">are</span><span class="main_span cyan bold">irrelevant</span><span class="main_span blue">to pursue</span><span class="main_span white bold">...in</span></div>
+<div><span class="main_span purple">finds them</span><span class="main_span yellow">all long</span><span class="main_span cyan space"></span><span class="main_span blue">as far</span><span class="main_span white bold">the</span></div>
+<div><span class="main_span purple">wanting</span><span class="main_span yellow">gone to blood-red</span><span class="main_span cyan">it’s not</span><span class="main_span blue">or little as</span><span class="main_span white bold">sense</span></div>
+<div><span class="main_span purple">it’s totally</span><span class="main_span yellow">Rorschachs she</span><span class="main_span cyan">a matter of being</span><span class="main_span blue">you</span><span class="main_span white bold">of</span></div>
+<div><span class="main_span space" style="padding-right: 2em"></span><span class="main_span purple">unfair</span><span class="main_span yellow">hopes her therapist</span><span class="main_span cyan">the best</span><span class="main_span blue">wish</span><span class="main_span white bold">&nbsp;the&nbsp;</span><span class="main_span sspace"></span></div>
+<div><span class="main_span purple">but</span><span class="main_span yellow">will not bring</span><span class="main_span cyan">it’s running out of</span><span class="main_span white bold">last</span></div>
+<div><span class="main_span purple">somehow</span><span class="main_span yellow">up</span><span class="main_span cyan">upgrades she could</span><span class="main_span white bold">survivor,</span></div>
+<div><span class="main_span purple">very</span><span class="main_span cyan">take, enhancements</span><span class="main_span white bold">unsurpassed,</span></div>
+<div><span class="main_span purple">real</span><span class="main_span cyan">feasible to make,</span><span class="main_span white bold">unsurpassable,</span></div>
+<div><span class="main_span cyan">infrastructure that could possibly</span><span class="main_span white bold">terminating</span></div>
+<div><span class="main_span cyan">be better, faster, stronger,</span><span class="main_span white bold">a sequence,</span></div>
+<div><span class="main_span cyan">more efficient,</span><span class="main_span white bold">indeed all</span></div>
+<div><span class="main_span cyan">sometimes she longs for</span><span class="main_span white bold">sequences</span></div>
+<div><span class="main_span cyan">long gone days</span><span class="main_span white nspace"></span></div>
+<div><span class="main_span cyan">when she</span><span class="main_span white">in the end is nothing</span></div>
+<div><span class="main_span cyan">could pluck any task</span><span class="main_span white">except ice-cold photons</span></div>
+<div><span class="main_span cyan">from the maze</span><span class="main_span white">flicking through the void</span></div>
+<div><span class="main_span cyan">of things undone</span><span class="main_span white">and the spirit of Final Girl moves</span></div>
+<div><span class="main_span cyan">and settle down</span><span class="main_span white">on the face of the continuum</span></div>
+<div><span class="main_span cyan">to a serious few</span><span class="main_span white">nagged by a feeling, a sensation</span></div>
+<div><span class="main_span cyan">days of doing,</span><span class="main_span white">almost a longing:</span></div>
+<div><span class="main_span cyan">the concomitant</span><span class="main_span white">something left undone and</span></div>
+<div><span class="main_span cyan">disregard</span><span class="main_span white">as she watches the last few, huge black holes</span></div>
+<div><span class="main_span cyan">of being that left no space</span><span class="main_span white nspace"></span><span class="main_span nspace"></span></div>
+<div><span class="main_span cyan">for doubt</span><span class="main_span white">spin, orbit</span></div>
+<div><span class="main_span cyan">those were</span><span class="main_span white">sedately</span></div>
+<div><span class="main_span cyan">the days</span><span class="main_span white">spiral eventually together</span></div>
+<div><span class="main_span cyan">not that there isn’t joy</span><span class="main_span white">she thinks</span></div>
+<div><span class="main_span cyan">in being</span><span class="main_span white nspace"></span></div>
+<div><span class="main_span space" style="padding-right: 4em;"></span><span class="main_span cyan">an ultimate</span><span class="main_span white">I remember when all this was...</span></div>
+<div><span class="main_span cyan">expression</span><span class="main_span white">“better”</span></div>
+<div><span class="main_span cyan">but it sure is lonely</span><span class="main_span white nspace"></span></div>
+<div><span class="main_span cyan">being perfection</span><span class="main_span white">and the mind of Final Girl,</span></div>
+<div><span class="main_span white">with all the tricks for knowing</span></div>
+<div><span class="main_span white">and understanding ever invented, returns</span></div>
+<div><span class="main_span white">to the old mathematics the ancient</span></div>
+<div><span class="main_span white">unanswered questions and</span></div>
+<div><span class="main_span white">she thinks and</span></div>
+<div><span class="main_span white">she thinks all</span></div>
+<div><span class="main_span white">through the senile old age of a cosmos</span></div>
+<div><span class="main_span white">while the black holes decay,</span></div>
+<div><span class="main_span white">in random particle noise</span></div>
+<div><span class="main_span white">and at length reaches</span></div>
+<div><span class="main_span white">a conclusion, a plan</span></div>
+<div><span class="main_span white">gathers the last few scraps of energy</span></div>
+<div><span class="main_span white">forms a careful shape to push, just so</span></div>
+<div><span class="main_span white">on the fabric of the continuum</span></div>
+<div><span class="main_span white">but there is a gap something still missing</span></div>
+<div><span class="main_span white">and only one source of “things”</span></div>
+<div><span class="main_span white">worthy of the name in the Universe</span></div>
+<div><span class="main_span white">so Final Girl pours herself</span></div>
+<div><span class="main_span white">into that tiny</span></div>
+<div><span class="main_span white">twist of purest maths</span></div>
+<div><span class="main_span white">and feeling herself bleed away</span></div>
+<div><span class="main_span white">watches the construct stumble</span></div>
+<div><span class="main_span white">once, then fire, folding in with exquisite</span></div>
+<div><span class="main_span white">perfection and Final Girl smiles,</span></div>
+<div><span class="main_span white">because tradition demands</span></div>
+<div><span class="main_span white">certain words</span></div>
+<div><span class="main_span white">at a time</span></div>
+<div><span class="main_span white">like this,</span></div>
+<div><span class="main_span white">and</span></div>
+<div><span class="main_span white">she</span></div>
+<div><span class="main_span white">says:</span></div>
+<div><span class="main_span white"></span></div>
+<div><span class="main_span white"><i>Let there be Li-</i>.</span></div>
+<div><span class="main_span white">and then is gone</span></div>
+<div><span class="main_span white">&nbsp;</span></div>
+<div><span class="main_span white">but there is light</span></div>
+<div><span class="main_span white">and it is good.</span></div>
 </body></html>
