@@ -9,6 +9,7 @@ body {
 	background-image: url("./IMG_20170910_132903171.jpg");
 	background-size: 100em 300em;
 	background-repeat: no-repeat;
+	overscroll-behavior-y: contain;
 }
 h1 {
 	text-align: center;
@@ -44,13 +45,13 @@ div {
 	animation-iteration-count: 1;
 }
 .special_red { background-color: red; color: black; }
-.red:active { background-color: red; color: black; transition: 0.0s; transition-timing-function: ease-in; }
-.green:active { background-color: green; color: black; transition: 0.0s; }
-.blue:active { background-color: blue; color: white; transition: 0.0s; }
-.yellow:active { background-color: yellow; color: black; transition: 0.0s; }
-.cyan:active { background-color: cyan; color: black; transition: 0.0s; }
-.purple:active { background-color: purple; color: white; transition: 0.0s; }
-.white:active { background-color: black; color: white; transition: 0.0s; }
+.red:hover { background-color: red; color: black; transition: 0.0s; transition-timing-function: ease-in; }
+.green:hover { background-color: green; color: black; transition: 0.0s; }
+.blue:hover { background-color: blue; color: white; transition: 0.0s; }
+.yellow:hover { background-color: yellow; color: black; transition: 0.0s; }
+.cyan:hover { background-color: cyan; color: black; transition: 0.0s; }
+.purple:hover { background-color: purple; color: white; transition: 0.0s; }
+.white:hover { background-color: black; color: white; transition: 0.0s; }
 .space::before {
 	padding: 0;
 	content: "s";
@@ -88,7 +89,7 @@ div {
 </head>
 <body>
 <h1>Final Girl</h1>
-<div><span class="special_fade bold">Touch/click to reveal more words...</span></div>
+<div><span class="special_fade bold">Touch/hover to reveal more words...</span></div>
 <div><span class="main_span special_red bold">...in</span></div>
 <div><span class="main_span red bold">the</span></div>
 <div><span class="main_span red bold">sense</span></div>
